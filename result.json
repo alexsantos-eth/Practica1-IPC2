@@ -1,4 +1,1 @@
-{
-  "IT": { "candidates": 2, "ages": 19.0, "wages": 701750.0 },
-  "TEST": { "candidates": 2, "ages": 19.0, "wages": 520175.0 }
-}
+{"IT": {"candidates": 2, "ages": 19.0, "wages": 701750.0}, "TEST": {"candidates": 2, "ages": 19.0, "wages": 520175.0}}

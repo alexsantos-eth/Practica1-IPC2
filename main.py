@@ -16,10 +16,11 @@ class main():
 
     # MENU PRINCIPAL
     def init_menu(self):
-        self.main_menu = menu('(1) Lectura de archivo CSV  | (2) Cálculo de Datos | (3) Generación de archivo JSON.', {
+        self.main_menu = menu('(1) Lectura de archivo CSV  | (2) Cálculo de Datos | (3) Generación de archivo JSON | (4) Información', {
             1: self.set_file,
             2: self.set_data,
-            3: self.write_output
+            3: self.write_output,
+            4: self.greeting
         })
 
     # OPCIONES
@@ -35,7 +36,14 @@ class main():
         with open('result.json', 'w') as fp:
             json.dump(self.json_dict.get_dict(), fp)
 
+        # REGRESAR
+         self.init_menu()
+
+    def greeting(self):
+        print(
+            'GRACIAS POR USAR MI PROGRAMA, VISITA MI GITHUB https://github.com/alexsan-dev')
+        self.init_menu()
+
 
 if __name__ == "__main__":
     main()
-1
