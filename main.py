@@ -32,7 +32,8 @@ class main():
         self.init_menu()
 
     def write_output(self):
-        print(self.json_dict.get_dict())
+        with open('result.json', 'w') as fp:
+            json.dump(self.json_dict.get_dict(), fp)
 
 
 if __name__ == "__main__":
