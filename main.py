@@ -16,7 +16,7 @@ class main():
 
     # MENU PRINCIPAL
     def init_menu(self):
-        self.main_menu = menu('(1) Lectura de archivo CSV  | (2) Cálculo de Datos | (3) Generación de archivo JSON | (4) Información', {
+        self.main_menu = menu('(1) Lectura de archivo CSV  | (2) Cálculo de Datos | (3) Generación de archivo JSON | (4) Salir/Información', {
             1: self.set_file,
             2: self.set_data,
             3: self.write_output,
@@ -28,21 +28,23 @@ class main():
         self.csv_file = csv_reader()
         self.init_menu()
 
+    # GENERAR DICCIONARIO
     def set_data(self):
         self.json_dict = compute_data(self.csv_file.get_matrix())
         self.init_menu()
 
+    # GENERAR JSON
     def write_output(self):
+        # ESCRIBIR
         with open('result.json', 'w') as fp:
             json.dump(self.json_dict.get_dict(), fp)
 
         # REGRESAR
-         self.init_menu()
+        self.init_menu()
 
     def greeting(self):
         print(
             'GRACIAS POR USAR MI PROGRAMA, VISITA MI GITHUB https://github.com/alexsan-dev')
-        self.init_menu()
 
 
 if __name__ == "__main__":

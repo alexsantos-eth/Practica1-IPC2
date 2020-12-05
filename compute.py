@@ -51,6 +51,7 @@ class compute_data:
 
         # ASIGNAR VALORES DE SALIDA
         for key in self.summary:
+            # LEER PROPIEDADES
             candidates = self.summary[key]['candidates']
             ages = self.summary[key]['ages']
             wages = self.summary[key]['wages']

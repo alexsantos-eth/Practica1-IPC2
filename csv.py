@@ -30,6 +30,7 @@ class csv_reader:
                 self.matrix.append(trim.split(','))
             line_count += 1
 
+        # CERRAR BUFFER
         reader.close()
 
     def get_matrix(self):
