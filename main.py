@@ -16,7 +16,7 @@ class main():
 
     # MENU PRINCIPAL
     def init_menu(self):
-        self.main_menu = menu('(1) Lectura de archivo CSV  | (2) Cálculo de Datos | (3) Generación de archivo JSON | (4) Salir/Información', {
+        self.main_menu = menu('(1) Lectura  | (2) Cálculo | (3) Generación | (4) Salir/Información', {
             1: self.set_file,
             2: self.set_data,
             3: self.write_output,
@@ -30,14 +30,18 @@ class main():
 
     # GENERAR DICCIONARIO
     def set_data(self):
-        self.json_dict = compute_data(self.csv_file.get_matrix())
+        if(self.csv_file != None):
+            self.json_dict = compute_data(self.csv_file.get_matrix())
+
+        # REGRESAR
         self.init_menu()
 
     # GENERAR JSON
     def write_output(self):
-        # ESCRIBIR
-        with open('result.json', 'w') as fp:
-            json.dump(self.json_dict.get_dict(), fp)
+        if(self.json_dict != None):
+            # ESCRIBIR
+            with open('result.json', 'w') as fp:
+                json.dump(self.json_dict.get_dict(), fp)
 
         # REGRESAR
         self.init_menu()
