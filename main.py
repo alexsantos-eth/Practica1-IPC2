@@ -41,7 +41,7 @@ class main():
         if(self.json_dict != None):
             # ESCRIBIR
             with open('result.json', 'w') as fp:
-                json.dump(self.json_dict.get_dict(), fp)
+                json.dump(self.json_dict.get_dict(), fp, indent=2)
 
         # REGRESAR
         self.init_menu()
