@@ -1,0 +1,14 @@
+{
+  "DESARROLLO": {
+    "candidates": 3,
+    "ages": 25.666666666666668,
+    "wages": 7666.666666666667
+  },
+  "DBA": { "candidates": 2, "ages": 27.5, "wages": 10500.0 },
+  "HHRR": { "candidates": 2, "ages": 29.0, "wages": 5500.0 },
+  "PROJECT MANAGER": {
+    "candidates": 3,
+    "ages": 28.666666666666668,
+    "wages": 9333.333333333334
+  }
+}

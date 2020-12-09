@@ -1,5 +1,6 @@
 # IMPORTS
 from menu import menu
+import os
 
 
 class csv_reader:
@@ -19,7 +20,7 @@ class csv_reader:
         self.path = input('Ingresa la ruta de tu archivo: ')
 
         # LEER
-        reader = open(self.path)
+        reader = open(self.path, encoding="ISO8859")
         line_count = 0
         for line in reader:
             # CORTAR
