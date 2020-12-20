@@ -7,6 +7,5 @@ def menu(options, actions):
     hr = "-" * (len(options) + 4)
     print(f'{hr}\n| {options} |\n{hr}')
     option = input('Escribe una opción: ')
-    # PRUEBA
     func = actions.get(int(option), lambda: menu(options, actions))
     func()
